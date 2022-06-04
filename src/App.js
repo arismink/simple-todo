@@ -10,7 +10,8 @@ function App() {
   const [toDos, setToDos] = useState([]);
 
   const addToDo = (toDo) => {
-    setToDos([...toDo, ...toDos])
+    // add new toDo at the beginning, with the old toDos spread
+    setToDos([toDo, ...toDos])
   }
 
   return (
