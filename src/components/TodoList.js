@@ -1,14 +1,14 @@
 import Todo from "./Todo"
 
-function ToDoList( { toDos }) {
+function TodoList( { toDos }) {
   return (
     <ul>
       {toDos.map(toDo => {
-        <Todo key={toDo} toDo={toDo} />
+        <Todo key={toDo.id} toDo={toDo} />
       })}
 
     </ul>
   );
 }
 
-export default ToDoList;
+export default TodoList;

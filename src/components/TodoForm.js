@@ -2,14 +2,14 @@ import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 function TodoForm({ addToDo }) {
-  const [toDo, setTodo] = useState({
+  const [toDo, setToDo] = useState({
     id: "",
     task: "",
     completed: false,
   });
 
   const handleTaskInputChange = (e) => {
-    setTodo({...toDo, task: e.target.value})
+    setToDo({...toDo, task: e.target.value})
   }
 
   const handleSubmit = (e) => {
@@ -21,7 +21,7 @@ function TodoForm({ addToDo }) {
       addToDo({ ...toDo, id: uuidv4()});
 
       // reset task input
-      setTodo({...toDo, task: ""});
+      setToDo({...toDo, task: ""});
     }
   }
 

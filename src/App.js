@@ -2,6 +2,7 @@ import { useState } from "react";
 
 
 import TodoForm from "./components/TodoForm";
+import TodoList from "./components/TodoList";
 
 import './App.css';
 
@@ -18,6 +19,9 @@ function App() {
         <p>React toDo</p>
         <TodoForm
           addToDo={addToDo}
+        />
+        <TodoList
+          toDos={toDos}
         />
       </header>
     </div>
